@@ -1,0 +1,27 @@
+{
+    "name": "idris/phpstarter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "IDRISSHACKER",
+            "email": "idrisscoder@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/dotenv": "^5.4",
+        "symfony/var-dumper": "^5.4",
+        "asm89/stack-cors": "^2.1",
+        "fruitcake/php-cors": "^1.1",
+        "firebase/php-jwt": "^6.3",
+        "vlucas/phpdotenv": "^5.4"
+    },
+
+    "autoload": {
+    "psr-4": {
+        "Model\\": "Model/",
+        "Controller\\": "Controller/",
+        "App\\": "App/",
+        "Migration\\": "migration/"
+    }
+}
+}

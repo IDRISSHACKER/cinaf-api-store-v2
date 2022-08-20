@@ -6,7 +6,7 @@ use \PDO;
 use \PDOException;
 use \Migration\Migration;
 
-class Database
+class Database implements DatabaseInterface
 {
 
 	private $db_name;
@@ -101,6 +101,16 @@ class Database
 		$re = $this->db()->prepare($statement);
 
 		return $re->execute($datas);
+	}
+
+	public function update($statement, $datas){
+		return $this->save($statement, $datas);
+	}
+
+	public function delete($statement, $datas)
+	{
+		$request = $this->db()->prepare($statement);
+		return $request->execute($datas);
 	}
 
 }

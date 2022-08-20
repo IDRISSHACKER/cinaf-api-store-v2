@@ -21,7 +21,8 @@
         "Model\\": "Model/",
         "Controller\\": "Controller/",
         "App\\": "App/",
-        "Migration\\": "migration/"
+        "Migration\\": "migration/",
+        "Interfaces\\": "interfaces/",
     }
 }
 }

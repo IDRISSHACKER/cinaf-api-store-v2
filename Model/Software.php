@@ -9,7 +9,8 @@ interface BaseModelInterface
 
 }
 
-class Software extends BaseModel implements BaseModelInterface {
+class Software extends BaseModel implements BaseModelInterface 
+{
 
     public function __construct(){
         
@@ -24,12 +25,13 @@ class Software extends BaseModel implements BaseModelInterface {
 
     }
 
-    public function addSoftware($software){
+    public function setSoftware($software){
 
+        self::bdd()->save("INSERT INTO software (title, description, fkSupport) VALUES (:title, :description, :fkSupport)", $software);
     }
 
     public function updateSoftware($software){
-
+        self::bdd()->update("UPDATE software SET title = :title, description = :description, fkSupport = :fkSupport WHERE id = :id", $software);
     }
 
     public function deleteSoftware($id){
